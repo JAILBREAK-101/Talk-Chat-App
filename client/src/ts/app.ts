@@ -1,0 +1,1 @@
+import {ChatMessageInterface} from "./interface"

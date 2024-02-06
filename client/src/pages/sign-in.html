@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talk Chat Application | Sign In</title>
+
+    <link rel="stylesheet" href="../styles/app.css">
+    <link rel="stylesheet" href="../styles/util.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="logo">
+                <!-- logo image -->
+                <a href="../index.html">
+                    <img src="../assets/chat-icon.svg" alt="Talk Chat App">
+                </a>
+            </div>
+
+            <nav class="nav">
+                <ul class="nav_list">
+                    <li class="li"><a href="https://github.com/JAILBREAK-101/" class="nav_link"><img src="../assets/github-icon.svg" alt="GitHub - JAILBREAK-101"></a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="chat-app">
+            
+            <div class="chat-app_auth">
+
+                <div class="chat-app_auth--header">
+                    <h2>Talk Chat App - Sign in</h2>
+                    
+                    <p>Kindly enter your credentials to continue.</p>
+                </div>
+
+                <form id="sign-in-form" class="chat-app_form">
+                    
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email
+                            <input type="text" name="email" id="email" class="form-input">
+                        </label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password" class="form-label">Password
+                            <input type="text" name="password" id="password" class="form-input">
+                        </label>
+                    </div>
+                    <!-- For this markup, help me to add show password icon modern markup in it, its styles and javascript logic to toggle it as it shows and hides the password -->
+                
+                    <div class="link-container">
+                        <a href="#">Forgot Password?</a>
+                    </div>
+
+                    <button type="submit">Sign in</button>
+
+                    <hr class="divider">
+
+                    <span class="form-link">Don't have an account?<a href="../pages/sign-up.html">Sign up</a></span>
+                </form>
+            </div>
+        </main>
+    </div>
+    
+    <script defer src="../ts/app.ts"></script>
+    <script defer src="../ts/interface.ts"></script>
+</body>
+</html> 

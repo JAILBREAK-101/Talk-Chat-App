@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talk Chat Application | Sign up</title>
+
+    <link rel="stylesheet" href="../styles/app.css">
+    <link rel="stylesheet" href="../styles/util.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="logo">
+                <!-- logo image -->
+                <a href="../index.html">
+                    <img src="../assets/chat-icon.svg" alt="Talk Chat App">
+                </a>
+            </div>
+
+            <nav class="nav">
+                <ul class="nav_list">
+                    <li class="li"><a href="https://github.com/JAILBREAK-101/" class="nav_link"><img src="../assets/github-icon.svg" alt="GitHub - JAILBREAK-101"></a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="chat-app">
+            
+            <div class="chat-app_auth">
+
+                <div class="chat-app_auth--header">
+                    <h2>Talk Chat App - Sign up</h2>
+                    
+                    <p>Kindly enter your credentials to get started.</p>
+                </div>
+
+
+                <div class="form-layout">
+
+                    <form id="sign-up-form" class="chat-app_form">
+                    
+                        <div class="form-group">
+                            <label for="username" class="form-label">Username
+                                <input type="text" name="username" id="username" class="form-input">
+                            </label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email
+                                <input type="text" name="email" id="email" class="form-input">
+                            </label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="password" class="form-label">Password
+                                <input type="text" name="password" id="password" class="form-input">
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="confirm-password" class="form-label">Confirm Password
+                                <input type="text" name="confirm-password" id="confirm-password" class="form-input">
+                            </label>
+                        </div>
+
+                        <button type="submit">Sign up</button>
+                        
+                        <hr class="divider">
+
+                        <span class="form-link">Have an account?<a href="../pages/sign-in.html">Sign in</a></span>
+                    </form>
+                </div>
+            </div>
+
+        </main>
+    </div>
+    
+    <script defer src="../ts/app.ts"></script>
+    <script defer src="../ts/interface.ts"></script>
+</body>
+</html> 

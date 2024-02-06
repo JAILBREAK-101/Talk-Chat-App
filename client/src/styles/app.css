@@ -1,0 +1,206 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Home Page */
+
+.hero {
+    background-color: var(--main-background-color);
+    padding: 50px 0;
+    text-align: center;
+}
+
+.hero_content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    color: var(--header-text-color);
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: var(--paragraph-text-color);
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.hero_button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.hero_button:hover {
+    background-color: var(--primary-color);
+}
+
+.hero_image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.features {
+    background-color: var(--white);
+    padding: 50px 0;
+    text-align: center;
+}
+
+.features_content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.features h2 {
+    color: var(--header-text-color);
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.feature {
+    margin-bottom: 20px;
+}
+
+.feature img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    color: var(--paragraph-text-color);
+    font-size: 18px;
+}
+
+.testimonials {
+    background-color: var(--main-background-color);
+    padding: 50px 10px;
+    text-align: center;
+}
+
+.testimonials_content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.testimonials h2 {
+    color: var(--header-text-color);
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.testimonial {
+    margin-bottom: 30px;
+}
+
+.testimonial p {
+    color: var(--paragraph-text-color);
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.testimonial cite {
+    color: var(--feint-color);
+    font-style: italic;
+    font-size: 16px;
+}
+
+.footer {
+    background-color: var(--header-text-color);
+    color: var(--white);
+    padding: 15px;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Application Wrapper */
+.chat-app {
+    max-width: 400px;
+    width: 100%;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: var(--primary-color);
+}
+
+/* Auth Pages */
+.chat-app_auth {
+    padding: 20px;
+}
+
+.chat-app_auth--header {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.chat-app_auth--header h2 {
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+
+.chat-app_auth--header p {
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+
+.chat-app_form {
+    display: flex;
+    flex-direction: column;
+}
+
+.link-container {
+    text-align: right;
+    margin-bottom: 15px;
+}
+
+.link-container a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Application / dashboard pages */

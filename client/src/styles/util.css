@@ -1,0 +1,126 @@
+/* root styles, utilities, layout styles, and animations are here */
+:root {
+    --main-background-color: #f5f5f5;
+    --primary-color: #007bff;
+    --white: #fff;
+
+    --header-text-color: #333;
+    --paragraph-text-color: #555;
+
+    --white-background-hover: #e6e6e6;
+    --feint-color: #777;
+
+    --form-color: #333;
+    --form-border-color: #ccc;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+}
+
+.header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.logo img {
+    width: 40px;
+    height: auto;
+}
+
+.nav {
+    display: flex;
+}
+
+.nav_list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.li {
+    margin-right: 15px;
+}
+
+.nav_link {
+    text-decoration: none;
+}
+
+.nav_button {
+    background-color: var(--white);
+    color: var(--primary-color);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.nav_button:hover {
+    background-color: var(--white-background-hover);
+}
+
+.nav_link img {
+    width: 30px;
+    height: auto;
+    border-radius: 50%;
+}
+
+@media (max-width: 600px) {
+    .nav_list {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+/* form layout and styles */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-label {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--form-color);
+    margin-bottom: 5px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--form-border-color);
+    border-radius: 4px;
+    outline: none;
+}
+
+.divider {
+    border: 1px solid var(--form-border-color);
+    margin: 20px 0;
+}
+
+.form-link {
+    font-size: 14px;
+}
+
+.form-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
