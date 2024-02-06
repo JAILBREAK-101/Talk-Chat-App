@@ -30,7 +30,7 @@ Make sure you have the following software installed on your machine:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/Talk-Chat-App.git
+   git clone https://github.com/JAILBREAK-101/Talk-Chat-App.git
    ```
 
 2. Navigate to the project directory:
@@ -47,13 +47,9 @@ Make sure you have the following software installed on your machine:
 
 ## Usage
 
-1. Start the application:
+1. Start the application: Install live server extension and open with live server.
 
-   ```bash
-   npm start
-   ```
-
-2. Open your browser and go to [http://localhost:3000](http://localhost:3000).
+2. Open your browser and go to [http://127.0.0.1:5500/](http://127.0.0.1:5500/).
 
 3. Sign up or log in to start chatting with others.
 
