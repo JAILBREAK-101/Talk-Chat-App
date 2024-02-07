@@ -3,9 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Talk Chat App | Chat</title>
+    <title>Talk Chat App | Dashboard</title>
+
+    <link rel="stylesheet" href="../styles/app.css">
+    <link rel="stylesheet" href="../styles/util.css">
+
+    <script defer src="../js/app.js"></script>
 </head>
 <body>
-    
+    <div class="dashboard">
+
+        <!-- Dashboard Template but will be mostly loaded from the server -->
+        <div class="chat-list">
+            <h2>Chat List</h2>
+            <ul id="userList">
+                
+            </ul>
+        </div>
+        <div class="chat-page">
+            <div class="chat-header">
+                <img id="selectedUserAvatar" src="" alt="">
+                <div class="user-info">
+                    <h2 id="selectedUserName"></h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                
+            </div>
+            <div class="message-input">
+                <input type="text" id="messageInput" placeholder="Type your message">
+                <button>Send</button>
+            </div>
+        </div>
+    </div>  
 </body>
 </html>
