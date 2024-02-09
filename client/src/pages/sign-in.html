@@ -7,9 +7,6 @@
 
     <link rel="stylesheet" href="../styles/app.css">
     <link rel="stylesheet" href="../styles/util.css">
-
-    <!-- script file -->
-    <script src="../js/script.js"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -43,12 +40,19 @@
                     <div class="form-group">
                         <label for="email" class="form-label">Email
                             <input type="text" name="email" id="email" class="form-input">
+                            <div class="form-error"></div>
                         </label>
                     </div>
                     
                     <div class="form-group">
                         <label for="password" class="form-label">Password
                             <input type="text" name="password" id="password" class="form-input">
+                            <div class="form-error"></div>
+                        </label>
+
+                        <label for="icon-toggle--password" class="eye-icon">
+                            <img src="../assets/show-eye-icon.svg" class="eyeicon" alt="">
+                            <input type="checkbox" id="icon-toggle--password">
                         </label>
                     </div>
                     <!-- For this markup, help me to add show password icon modern markup in it, its styles and javascript logic to toggle it as it shows and hides the password -->
@@ -65,7 +69,14 @@
                 </form>
             </div>
         </main>
+
+        <dialog class="user-config-modal"></dialog>
     </div>
+
+    <script src="../js/util.js"></script>
+    <script src="../js/config.js"></script>
+    <script src="../js/auth/auth.js"></script>
+    <script src="../js/auth/signin.js"></script>
     
     <!-- <script defer src="../ts/app.ts"></script> -->
     <!-- <script defer src="../ts/interface.ts"></script> -->

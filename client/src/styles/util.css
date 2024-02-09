@@ -12,6 +12,10 @@
 
     --form-color: #333;
     --form-border-color: #ccc;
+
+    --red-color: #db0a0a;
+    --green-color: #21c026;
+    --black-color: #000000;
 }
 
 body {
@@ -92,6 +96,7 @@ body {
 
 /* form layout and styles */
 .form-group {
+    position: relative;
     margin-bottom: 15px;
 }
 
@@ -123,4 +128,38 @@ body {
     color: var(--primary-color);
     text-decoration: none;
     font-weight: bold;
+}
+
+.form-error {
+    color: var(--red-color);
+    font-weight: 600;
+}
+
+.error input {
+    border: 2px solid var(--red-color);
+}
+
+.success input {
+    border: 2px solid var(--green-color);
+}
+
+/* Password Shower and Hider Icon Styles */
+
+#icon-toggle--password, #icon-toggle--confirm-password {
+    visibility: hidden;
+}
+
+.eye-icon {
+    display: block;
+    width: 100%;
+    left: 90%;
+    bottom: 5%;
+    position: absolute;
+    cursor: pointer;
+}
+
+.eye-icon img {
+    max-width: 100%;
+    width: 20px;
+    object-fit: cover;
 }

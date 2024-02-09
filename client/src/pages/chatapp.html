@@ -15,25 +15,32 @@
 
         <!-- Dashboard Template but will be mostly loaded from the server -->
         <div class="chat-list">
-            <h2>Chat List</h2>
-            <ul id="userList">
+
+            <!-- Left Alignment -->
+            <h2>Chat List <span data-chat-count></span></h2>
+            <ul data-chat-list id="userList">
                 
             </ul>
         </div>
+
+        <!-- Right Alignment -->
         <div class="chat-page">
+
             <div class="chat-header">
-                <img id="selectedUserAvatar" src="" alt="">
+                <img data-user-image id="selectedUserAvatar" src="" alt="">
                 <div class="user-info">
-                    <h2 id="selectedUserName"></h2>
-                    <p></p>
+                    <h2 data-user-name id="selectedUserName"></h2>
+                    <p data-user-info></p>
                 </div>
             </div>
-            <div class="chat-messages" id="chatMessages">
+            
+            <div data-chat-messages class="chat-messages" id="chatMessages">
                 
             </div>
+            
             <div class="message-input">
-                <input type="text" id="messageInput" placeholder="Type your message">
-                <button>Send</button>
+                <input data-message-input type="text" id="messageInput" placeholder="Type your message">
+                <button data-send-button>Send</button>
             </div>
         </div>
     </div>  
