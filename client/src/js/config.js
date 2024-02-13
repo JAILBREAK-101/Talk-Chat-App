@@ -5,6 +5,27 @@ let userConfigData = {
     profilePicture: null
 }
 
+const changeUserName = (focus) => {
+    {
+        let input = focus.previousElementSibling
+
+        if (!input.disabled) return;
+
+        else {
+            // if (isRequired(input)) return;
+
+            // else {
+                
+                input.disabled = false
+                
+                input.focus()
+                                                
+                return userConfigData;
+            // }
+        }
+    }
+}
+
 const saveUserName = (focus) => {
     {
         let input = focus.previousElementSibling.previousElementSibling
@@ -22,27 +43,6 @@ const saveUserName = (focus) => {
             
                 input.disabled = true;
                 
-                return userConfigData;
-            // }
-        }
-    }
-}
-
-const changeUserName = (focus) => {
-    {
-        let input = focus.previousElementSibling
-
-        if (!input.disabled) return;
-
-        else {
-            // if (isRequired(input)) return;
-
-            // else {
-                
-                input.disabled = false
-                
-                input.focus()
-                                                
                 return userConfigData;
             // }
         }
@@ -75,7 +75,7 @@ const changeAboutInfo = (focus) => {
 
     else {
         input.disabled = false;
-        
+
         input.focus()
 
         // userConfigData.aboutInfo = input.value;
