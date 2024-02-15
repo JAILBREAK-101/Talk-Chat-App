@@ -1,8 +1,10 @@
 # Talk Chat-App
 
-Welcome to Talk Chat-App, a simple and secure chat application for connecting with friends, family, and colleagues. The project is built using HTML, CSS, and TypeScript.
+Welcome to Talk Chat-App, a safe and secure chat application for connecting with friends, family, and colleagues. The project is built using HTML, CSS, JavaScript, Node.Js, Express.Js, and Socket.Io.
 
 ## Table of Contents
+
+<!-- "ws": "^8.16.0" -->
 
 - [Features](#features)
 - [Getting Started](#getting-started)
@@ -58,6 +60,9 @@ Make sure you have the following software installed on your machine:
 - HTML
 - CSS
 - TypeScript
+- Node.Js
+- Express.Js
+- Socket.Io
 
 ## Contributing
 
