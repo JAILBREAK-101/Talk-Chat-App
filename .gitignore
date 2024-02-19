@@ -1,0 +1,21 @@
+# Client Ignores
+
+# Ignore Public folder
+/client/public
+
+# Ignore TypeScript Files
+/client/src/ts/
+
+# Hide client markdown files except the README.md
+client/markdown
+
+# Hide Config.json files
+client/config-json
+
+# Server Ignores
+
+# Ignore Node Modules
+/server/node_modules
+
+# Ignore env files
+server/.env
