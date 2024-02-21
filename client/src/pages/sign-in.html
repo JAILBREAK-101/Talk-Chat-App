@@ -46,12 +46,12 @@
                     
                     <div class="form-group">
                         <label for="password" class="form-label">Password
-                            <input type="text" name="password" id="password" class="form-input">
+                            <input type="password" name="password" id="password" class="form-input">
                             <div class="form-error"></div>
                         </label>
 
-                        <label for="icon-toggle--password" class="eye-icon">
-                            <img src="../assets/show-eye-icon.svg" class="eyeicon" alt="">
+                        <label for="icon-toggle--password" class="eye-icon-label">
+                            <img src="../assets/show-eye-icon.svg" class="eye-icon" alt="">
                             <input type="checkbox" id="icon-toggle--password">
                         </label>
                     </div>
@@ -70,7 +70,7 @@
             </div>
         </main>
 
-        <dialog class="user-config-modal"></dialog>
+        <dialog data-config-dialog class="user-config-modal"></dialog>
     </div>
 
     <script src="../js/util.js"></script>
