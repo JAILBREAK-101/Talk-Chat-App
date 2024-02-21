@@ -18,6 +18,16 @@
     --black-color: #000000;
 }
 
+/* Reset styles */
+dialog, [data-config-dialog] {
+    border: 1px solid var(--primary-color);
+    padding: 1rem;
+    margin: 1.5rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+}
+/* Reset styles */
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -95,9 +105,21 @@ body {
 }
 
 /* form layout and styles */
+.form-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.2rem;
+}
+
 .form-group {
     position: relative;
     margin-bottom: 15px;
+}
+
+.form-group--config, [set-username], [set-about], [set-profile-picture] {
+    display: inline-flex;
+    align-items: center;
 }
 
 .form-label {
@@ -114,6 +136,37 @@ body {
     border-radius: 4px;
     outline: none;
 }
+
+.form-input--config, [data-username], [data-about-info], [data-profile-picture] {
+    padding: 0.5rem;   
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+}
+
+/* Config Image Selector */
+
+/* The Label of the image selector */
+[set-profile-picture] {
+    background: var(--primary-color);
+    color: var(--white);
+    cursor: pointer;
+    padding: 0.6rem;
+    border-radius: 5px;
+    transition: 0.2s border ease-in, 0.2s background ease-in-out;
+    
+    &:hover {
+        border: 1px solid var(--primary-color);
+        background: none;
+        color: var(--black-color);
+    }
+}
+
+/* The Input of the image selector */
+[data-profile-picture] {
+    display: none;
+}
+
+/* Config Image Selector */
 
 .divider {
     border: 1px solid var(--form-border-color);
@@ -149,17 +202,43 @@ body {
     visibility: hidden;
 }
 
-.eye-icon {
+.eye-icon-label {
     display: block;
-    width: 100%;
-    left: 90%;
-    bottom: 5%;
+    left: 91%;
+    bottom: -34%;
     position: absolute;
     cursor: pointer;
 }
 
-.eye-icon img {
+.eye-icon-label img, .eye-icon {
     max-width: 100%;
     width: 20px;
     object-fit: cover;
 }
+
+/* Config Form Utilities Styles */
+
+.chat-app_config {
+    padding: 2rem;
+}
+
+.chat-app_config--header {
+    position: relative;
+}
+
+.close-button {
+    position: absolute;
+    left: 10%;
+    width: 40px;
+    display: inline;
+    border-radius: 10px;
+    background: none;
+    left: 98%;
+    bottom: 60%;
+    
+    & > img {
+        max-width: 100%;
+    }
+}
+
+/* Config Form Utilities Styles */

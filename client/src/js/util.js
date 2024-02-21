@@ -20,9 +20,15 @@ const displaySuccess = (formGroup, input) => {
     formError.textContent = ''
 }
 
-const isRequired = (value) => {
-    console.log(value)
-    // value.value == "" ? false : true
+const isRequired = (inputValue, inputRequired) => {
+    if (!inputValue) {
+        inputRequired = true
+    }
+    else {
+        inputRequired = false
+    }
+
+    return inputRequired
 };
 
 const isUsernameValid = (name) => {
@@ -57,6 +63,18 @@ const isPasswordSecure = (input) => {
         return passwordSecure
     }
 }
+
+// const isPasswordSame = (password, confirmPassword) => {
+//     let passwordSame = false;
+
+//     if (password.value === confirmPassword.value) {
+//         passwordSame = true;
+
+//         displayError(formGroup, input)
+//     }
+
+//     return passwordSame
+// }
 
 const isBetween = (input, minLength, maxLength) => {
     let isBetweenValue = false;
@@ -100,9 +118,9 @@ const validateUsername = (formGroup, username) => {
             username,
             `Username must be between ${min} and ${max} characters.`);
     } 
-    else if (!isNaN(Number(username.value))) {
-        displayError(formGroup, username, "Username should be letters and not numbers");
-    } 
+    // else if (!isNaN(Number(username.value))) {
+    //     displayError(formGroup, username, "Username should be letters and not numbers");
+    // } 
     else {
         displaySuccess(formGroup, username);
         isValid = true;

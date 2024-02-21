@@ -16,11 +16,11 @@ const showHidePassword = (passwordInput, eyeIcon) => {
 }
 
 // -- Show and Hide Password Functionality
-iconLabels.forEach(label => {
-    label.addEventListener('click', (e) => {
-        showHidePassword(signInForm.querySelector('#password'), label.querySelector('img'))
-    })
-})
+// iconLabels.forEach(label => {
+//     label.addEventListener('click', (e) => {
+//         showHidePassword(signInForm.querySelector('#password'), label.querySelector('img'))
+//     })
+// })
 
 signUpForm.addEventListener('submit', (e) => {
     e.preventDefault()
@@ -31,18 +31,20 @@ signUpForm.addEventListener('submit', (e) => {
     const confirmPassword = signUpForm.querySelector('#confirm-password')
 
     // start from validation and go to authentication then go to the sending of the data
-    // if (!(validateUsername(document.querySelector('.form-group')[0]), username) && !isEmailValid(email) && !isPasswordSecure(password)) return
+    if (!(validateUsername(signUpForm.querySelectorAll('.form-group')[0]), username) && !isEmailValid(email) && !isPasswordSecure(password)) return
         
-    let signUpFormDetails = {
-        method: "sign_up",
-        username: username.value,
-        email: email.value,
-        password: password.value,
-        confirmPassword: confirmPassword.value
-    }
-
-        let storedSignUpData = JSON.stringify(localStorage.setItem('user-signup-info', signUpFormDetails))
-
-        authenticateUser(signUpFormDetails)
+    // else {
+        let signUpFormDetails = {
+            method: "sign_up",
+            username: username.value,
+            email: email.value,
+            password: password.value,
+            confirmPassword: confirmPassword.value
+        }
+        console.log(signUpFormDetails)
+        // let storedSignUpData = JSON.stringify(localStorage.setItem('user-signup-info', signUpFormDetails))
+        
+        // authenticateUser(signUpFormDetails)
+    // }
 
 })
