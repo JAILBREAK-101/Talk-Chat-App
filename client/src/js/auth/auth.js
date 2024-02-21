@@ -1,15 +1,3 @@
-const showHidePassword = (passwordInput, eyeIconLabel) => {
-    // Toggles show and hide password for password input
-    passwordInput.type = "password"
-    eyeIconLabel.querySelector('.eyeicon').src = "../assets/slash-eye-icon.svg"
-
-    eyeIconLabel.addEventListener('click', () => {
-        passwordInput.type = "text"
-        eyeIconLabel.querySelector('.eyeicon').src = "../assets/show-eye-icon.svg"
-    })
-
-}
-
 const authenticateUser = (authDetails) => {
     // Determine auth method
     if (authDetails.method == "sign_in") {
