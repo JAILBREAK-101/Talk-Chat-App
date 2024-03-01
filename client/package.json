@@ -1,7 +1,7 @@
 {
   "name": "Talk ChatApp Client",
   "scripts": {
-    "test": ""
+    "dev": "live-server src"
   },
   "dependencies": {
     "@socket.io/admin-ui": "^0.5.1",
