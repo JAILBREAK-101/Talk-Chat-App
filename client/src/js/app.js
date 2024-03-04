@@ -10,6 +10,9 @@ const chatMessages = document.querySelector('[data-chat-messages]')
 const messageInput = document.querySelector('[data-message-input]')
 const sendButton = document.querySelector('[data-send-button]')
 
+const logoutButton = document.querySelector('[data-logout-button]')
+const logoutModal = document.querySelector('[data-logout-dialog]')
+
 const sendAuthData = (authDetails) => {
     // Receive auth details needed and use in the chat application
 }
@@ -58,3 +61,21 @@ const TalkChatApp = new ChatApp([userName, userImage])
 sendButton.addEventListener('click', () => {
     TalkChatApp.sendMessage(messageInput)
 })
+
+const closeLogoutModal = () => {
+    document.querySelector('.user-logout-modal').open = false
+}
+
+const handleLogout = () => {
+    logoutModal.open = true
+
+    logoutModal.innerHTML = `
+        <p>Are you sure you want to logout from Talk Chat App</p>
+        <button class="close-button" onclick = "closeLogoutModal()"><img src="../assets/close-icon.svg" alt="close-icon" /></button>
+
+        <button>Yes, log me out</button>
+        <button>No, keep me in</button>
+    `
+}
+
+logoutButton.addEventListener('click', handleLogout)
