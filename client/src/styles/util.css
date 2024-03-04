@@ -19,7 +19,7 @@
 }
 
 /* Reset styles */
-dialog, [data-config-dialog] {
+dialog, [data-config-dialog] , [data-logout-dialog]{
     border: 1px solid var(--primary-color);
     padding: 1rem;
     margin: 1.5rem;
