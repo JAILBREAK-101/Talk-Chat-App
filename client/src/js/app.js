@@ -1,4 +1,6 @@
-const messagesData = {};
+// const socket = io('js-chat-app://localhost:3000')
+
+// Keyboard function for when the user clicks on enter to send a message instead of tabing to a new line
 
 const chatCount = document.querySelector('[data-chat-count]')
 const userImage = document.querySelector('[data-user-image]')
@@ -10,7 +12,6 @@ const sendButton = document.querySelector('[data-send-button]')
 
 const sendAuthData = (authDetails) => {
     // Receive auth details needed and use in the chat application
-    
 }
 
 
@@ -20,16 +21,40 @@ class ChatApp {
         this.userImage = user[1]
     }
 
-    get test() {
-        
-    }
-
     receiveAuthData(authData) {
         // sendAuthData()
     }
+
+    createMessage(message) {
+        let messageBlock = document.createElement(`div`)
+        messageBlock.className = "message-block"
+        messageBlock.innerHTML = `
+            <!-- <span><button>&#8942;</button></span> -->
+            <p class="message-content">User: ${message.value}</p>
+
+            <span class="time">${new Date().getHours()} : ${new Date().getMinutes()}</span>
+        `
+
+        return messageBlock
+    }
+
+    appendMessage(message) {
+        chatMessages.append(this.createMessage(message))
+    }
+
+    clearAndFocusMessageInput() {
+        messageInput.value = ""
+        messageInput.focus()
+    }
+
+    sendMessage(message) {
+        this.appendMessage(message)
+        this.clearAndFocusMessageInput()
+    }
 }
 
-// Initialize the ChatApp Class with its methods and variables
 const TalkChatApp = new ChatApp([userName, userImage])
 
-TalkChatApp.test
+sendButton.addEventListener('click', () => {
+    TalkChatApp.sendMessage(messageInput)
+})

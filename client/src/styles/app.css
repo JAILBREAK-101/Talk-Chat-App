@@ -298,6 +298,10 @@ button:hover {
 
 .chat-messages {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
 }
 
 .message-input {
@@ -328,12 +332,6 @@ button:hover {
     background-color: #0056b3;
 }
 
-/* Existing styles remain unchanged */
-
-.chat-message {
-    margin-bottom: 10px;
-}
-
 /* Additional styles for dynamic updates */
 #userList li:hover {
     background-color: #e0e0e0;
@@ -349,4 +347,31 @@ button:hover {
 .message-input button:hover {
     background-color: #0056b3;
     color: #fff;
+}
+
+/* Styles for when user sends messages to another user */
+.message-block {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: #cbc6c6;
+    border-radius: 15px;
+    padding: 1rem;
+    align-items: flex-start;
+
+    & > span {
+        /* position: absolute; */
+        left: 75%;
+        top: 10%;
+    }
+}
+
+.message-content {
+    max-width: 50ch;
+    word-wrap: break-word;
+}
+
+.time {
+    font-size: 12px;
+    text-align: right;
 }
