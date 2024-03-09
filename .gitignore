@@ -19,3 +19,6 @@ client/config-json
 
 # Ignore env files
 server/.env
+
+# Ignore Test Files
+server/test
